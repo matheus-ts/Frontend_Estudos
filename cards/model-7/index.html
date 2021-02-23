@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="chip">
+                <img src="./assets/chip.png" alt="">
+                <img src="./assets/contact.png" alt="">
+            </div>
+            <div class="card-number">
+                <input maxlength="4" type="text"> <span>-</span>
+                <input maxlength="4" type="text"> <span>-</span>
+                <input maxlength="4" type="text"> <span>-</span>
+                <input maxlength="4" type="text">
+            </div>
+            <div class="info-owner">
+                <h2 id="name">Matheus C Silva</h2>
+            </div>
+        </div>
+        <div class="form">
+            <fieldset>
+                <legend>Nome Titular</legend>
+                <input onkeyup="setName()" id="nome" type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Card Number</legend>
+                <input maxlength="19" type="text">
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+
+</html>

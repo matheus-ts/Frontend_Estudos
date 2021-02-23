@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #030303; */
+    background-size: cover;
+    background-image: url(./assets/bg.jpg);
+    display: flex;
+    background-position:center ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    width: 650px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(45px);
+    display: flex;
+    z-index: 2;
+    border: 1px solid rgba(255,255,255,0.4);
+    flex-direction: column;
+    position: relative;
+}
+.card .logo{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content:flex-end;
+    padding: 30px;
+}
+.card .logo img{
+    max-width: 70px;
+}
+.card .chip{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0px 60px;
+    align-self: center;
+}
+.card .chip img{
+    max-width: 45px;
+    opacity: 0.5;
+    filter: invert(1);
+}
+.card .chip img:nth-child(2){
+    max-width: 40px;
+    opacity: 0.5;
+    filter: invert(1);
+}
+.card .card-number{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+.card .card-number span{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+}
+.card .card-number input{
+    border: none;
+    background-color: transparent;
+    width: 100px;
+    height: 50px;
+    margin: 10px 10px;
+    letter-spacing: 2px;
+    outline: none;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+}
+.card .info-owner{
+    display: flex;
+    padding: 30px 50px;
+}
+.card .info-owner h2{
+    font-size: 1.5em;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    line-height: 2em;
+    font-weight: 500;
+}
+.form{
+    width: 550px;
+    height: 100%;
+    position: relative;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding: 30px 30px;
+    background-color: #f1f1f1;
+}
+.form fieldset{
+    height: 100%;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+.form fieldset legend{
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+    color: darkorchid;
+    font-family: sans-serif;
+}
+.form fieldset input{
+    width: 100%;
+    border: none;
+    height: 50px;
+    background: #f1f1f1;
+    outline: none;
+    border-bottom: 1px solid darkorchid;
+    padding-left: 20px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 25PX;
+    text-transform: uppercase;
+}

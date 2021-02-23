@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url(./assets/background.png);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 5%;
+    padding-left: 5%;
+    position: relative;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+.menu{
+    width: 40px;
+    cursor: pointer;
+}
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item nav{
+    flex: 1;
+    padding-left: 60px;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+}
+ul li:last-child{
+    padding-right: 35px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    height: 88%;
+    padding-top: 2%;
+}
+.content .col{
+    flex-basis: 50%;
+}
+.content .col  h1{
+    font-size: 6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-left: 2px;
+}
+.content .col p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.content .col .btn{
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 60px;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(./assets/pic-1.png);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+}
+.card:nth-child(1){
+    box-sizing: border-box;
+    background-size: cover;
+    background-image: url(./assets/pic-3.png);
+    background-position: center;
+}
+.card:nth-child(2){
+    background-image: url(./assets/pic-2.png);
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+.card:nth-child(3){
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/pic-4.png);
+}
+.card:hover{
+    transform: translateY(-18px);
+}
+h5{
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.col .card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 9px;   
+}

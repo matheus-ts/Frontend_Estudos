@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: center;
+    background-size: cover;
+    background-image: url('./assets/BG.png');
+    position: relative;
+}
+.container header{
+    padding: 30px 50px;
+    display: flex;
+    height: 20%;
+}
+.container header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.container header nav ul{
+    list-style: none;
+}
+.container header nav ul li{
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 30px;
+    font-size: 1.4em;
+}
+.container header nav .logo{
+    font-size: 1.5em;
+    border: 1px solid yellow;
+    padding: 5px 20px;
+    color: #fff;
+}
+.container .content{
+    height: 60vh;
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+}
+.content .txtBox{
+    padding: 50px;
+    flex-basis: 50%;
+}
+.container .content .txtBox h2{
+    font-size: 3em;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+.container .content .txtBox span{
+    color: yellow;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+.container .content .txtBox hr{
+    margin-top: 10px;
+    border: 2px solid yellow;
+}
+.container .content .txtBox p{
+    padding-left: 10px;
+    font-size: 1.4em;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.container .content .txtBox .btn{
+    padding: 5px 40px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size: 1.4em;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    background: transparent;
+}

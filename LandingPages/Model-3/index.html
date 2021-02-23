@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="text/javascript">
+    function toggle()
+    {
+        var sec = document.getElementById('sec');
+        var nav = document.getElementById('navigation');
+        sec.classList.toggle('active')
+        nav.classList.toggle('active')
+    }
+</script>
+
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="" class="logo">Matheus.dart</a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2>Hello World ? <br>
+                I'm <span>Matheus Candido</span>
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid iusto, quod, esse voluptatibus tenetur, veritatis est unde
+                ex dolorem eaque fuga explicabo. Esse, sit recusandae! Animi dolor est possimus aliquid.
+            </p>
+            <a href="">Know More</a>
+        </div>
+        <ul class="sci">
+            <li><a href=""><img src="./assets/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="./assets/linkedin.png" alt=""></a></li>
+            <li><a href=""><img src="./assets/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <div id="navigation">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

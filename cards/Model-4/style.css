@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root{
+    --circle: #149911;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#fff;
+}
+.card
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.card .circle::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+    background: #149911;
+}
+.card:hover .circle:before{
+    background: #5448c8;
+    clip-path: circle(400px at center);
+}
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: none;
+    pointer-events: none;
+    transition: 0.5s;
+    width: 270px;
+}
+.card:hover img{
+    left: 75%;
+    width: 400px;
+}
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    color: #fff;
+    display: none;
+}
+.card:hover .content{
+    display: block;
+    left: 0%;
+    transition: 0.5s;
+}
+.card .content h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 1.8;
+}
+.card .content p{
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.card .content a{
+    padding: 10px 30px;
+    margin-top: 10px;
+    background-color: #149911;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+}
+@media(max-width:991px){
+
+    .container{
+        width: auto;
+    }
+    .card{
+        max-width: 350px;
+        align-items: flex-start;
+
+        border-radius: 10px;
+    }
+    .card:hover{
+         height: 600px;
+    }
+   .container .card .content{
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+     .card:hover img{
+         top: 80%;
+         left: 50%;
+         width: 300px;
+     } 
+    }

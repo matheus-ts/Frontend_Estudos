@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: #0c0c0c;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 1280px;
+    height: 90vh;
+    background-color: #fff;
+    display: flex;
+    
+}
+.form-container{
+    min-height: 90vh;
+    width: 45%;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-container .logo-container{
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-container .logo-container  img{
+    max-width: 50px;
+}
+.form-container .logo-container .region{
+    display: flex;
+    align-items: center;
+}
+.form-container .logo-container .region h4{
+    font-weight: 700;
+    padding-right: 5px;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+.form-container .logo-container .region i{
+    font-size: 1.2em;
+}
+.form-container .input-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:100px 50px;
+}
+.form-container .input-form h3{
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3vh;
+    line-height: 1.5em;
+    font-weight: 800;
+    color: #1E1E24;
+}
+.form-container .input-form .input-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-container .input-form .input-group input{
+    width: 320px;
+    border: none;
+    border-radius: 2px;
+    background-color: #E0E2DB;
+    height: 6vh;
+    padding-left: 25px;
+    outline: none;
+    margin: 5px;
+}
+.form-container .input-form .input-group input::placeholder{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.form-container .input-form .input-check{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.form-container .input-form .input-check input{
+    margin-right: 10px;
+    width: 15px;
+    border: 0 none;
+    background: #1E1E24;
+    height: 15px;
+}
+.form-container .input-form .input-check h4{
+    font-size: 0.8em;
+    font-weight: 800;
+    opacity: 0.4;
+    text-transform: uppercase;
+    color: rgba(30,30,36,0.8);
+}
+.form-container .input-form .button{
+    width: 100%;
+    padding: 0px 40px;
+}
+.form-container .input-form .social-icons button{
+    width: 300px;
+    border: none;
+    outline: none;
+    background-color: #1E1E24;
+    height: 40px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.form-container .input-form .social-icons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container .input-form .social-icons .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+.form-container .input-form .social-icons .social span{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background-color: #1E1E24;
+}
+.form-container .new-user{
+    display: flex;
+    align-items: center;
+    padding:0px 10px;
+    justify-content: space-between;
+}
+.form-container .new-user .links{
+    display: flex;
+    margin-top: -20px;
+    flex-direction: column;
+}
+.form-container .new-user .links a{
+    color: rgba(30,30,36,0.8);
+    text-decoration: underline;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.form-container .input-form .social-icons span:nth-child(1){
+    background-color: #173753;
+}
+.form-container .input-form .social-icons span:nth-child(2){
+    background-color: #20A39E;
+}
+.form-container .input-form .social-icons span:nth-child(3){
+    background-color: #EF5B5B;
+}
+.background-image{
+    width: 100%;
+    background-image: url(./assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}

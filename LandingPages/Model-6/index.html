@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo"><img src="./assets/logo.png" alt=""></a>
+        <ul class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">TV Shows</a></li>
+            <li><a href="">Movies</a></li>
+            <li><a href="">Latest</a></li>
+            <li><a href="">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <img src="./assets/name.png" class="nameMovie" alt="">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt aliquam
+                hic repellat. Commodi praesentium necessitatibus, ipsa nostrum eaque fuga odit dolor
+                consequuntur itaque nemo sit quibusdam dicta voluptas velit?</p>
+            <div class="buttons">
+                <a href=""><i class="fa fa-play"></i>Play</a>
+                <a href=""><i class="fa fa-plus"></i>My List</a>
+            </div>
+        </div>
+        <div class="play"><img src="./assets/play.png" alt="">Watch trailer</div>
+    </div>
+    <div class="trailer" id="trailer">
+        <video src="./assets/video.mp4" controls="true" autoplay="true"></video>
+        <img src="./assets/close.png" class="close" alt="">
+    </div>
+</body>
+
+<script>
+    function open()
+    {
+        const trailer = document.querySelector('.trailer')
+        trailer.classList.toggle('active');
+    }
+
+    function close()
+    {
+        openTraler.style.visibility = "hidden"
+    }
+</script>
+
+</html>
