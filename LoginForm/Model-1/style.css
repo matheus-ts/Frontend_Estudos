@@ -10,11 +10,11 @@
     width: 100%;
     min-height: 100vh;
     display: grid;
-    
+    background-color: #3C3C3B;
     /*Definindo o número de colunas no design*/
     grid-template-columns: repeat(2,1fr);
 
-    grid-gap: 7rem;
+    grid-gap: 10rem;
     padding: 0 2em;
 }
 .wave{
@@ -22,10 +22,19 @@
     height: 100%;
     left: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 0;
+}
+.top-wave{
+    position: fixed;
+
+    height: 50%;
+    top: 0;
+    right: 0;
+    z-index: 0;
 }
 .img{
     display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
 }
@@ -40,12 +49,13 @@
 
 form{
     width: 360px;
+    z-index: 2;
 }
 form h2{
     font-size: 2.6em;
     text-transform: uppercase;
     margin: 15px 0;
-    color: #333;
+    color: #EE6C4D;
 }
 .input-div{
     display: grid;
@@ -101,7 +111,7 @@ form h2{
     background: none;
     padding-left: 10px;
     font-size: 1.2rem;
-    color: #555;
+    color: #999;
 }
 a{
     display: block;
@@ -129,16 +139,17 @@ a:hover{
     font-weight: 600;
     cursor: pointer;
     background-size: 200%;
-    background: linear-gradient(to right,#6A82FF,#5A82FF,#5071FF );
+    background: linear-gradient(to left,#EB3349,#F45C43 );
     outline: none;
     transition: .5s ease;
 }
 .btn:hover{
+    transition: 0.3s ease;
     background-position: right;
 }
 
 .input-div.focus .i i{
-    color: #5071FF;
+    color: #EE6C4D;
 }
 .input-div.focus div h5{
     top: -5px;
@@ -151,14 +162,17 @@ a:hover{
     width: 0;
     height: 2px;
     transition: .4s ease;
-    background: #6A82FF;
+    background: #EE6C4D;
 }
 .input-div.focus::after,.input-div.input-div.focus::before{
     width: 100%;
 }
 @media screen and (max-width: 1050px) {
     .container{
-        grid-gap: 5rem ;
+        grid-gap: 7rem ;
+    }
+    .top-wave{
+        height: 30%;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -172,9 +186,15 @@ a:hover{
     .img img{
         width:400px;
     }
+    .top-wave{
+        height: 20%;
+    }
 }
 @media screen and (max-width: 900px) {
     .img{
+        display: none;
+    }
+    .top-wave{
         display: none;
     }
     .container{
