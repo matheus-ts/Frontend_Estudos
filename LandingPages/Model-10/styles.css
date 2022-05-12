@@ -134,7 +134,7 @@ header{
     pointer-events: none;
 }
 .active{
-    opacity: 1;
+    opacity: 1 !important;
 }
 .slider .slides h2{
     color: var(--white);
