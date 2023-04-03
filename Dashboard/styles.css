@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap'); 
+
+:root{
+    --color-primary: #7380EC;
+    --color-danger: #FF7782;
+    --color-success: #41F1B6;
+    --color-warning: #FFBB55;
+    --color-white: #FFF;
+    --color-info-dark: #7D8DA1;
+    --color-info-light: #DCE1EB;
+    --color-dark: #363949;
+    --color-light: rgba(132,139,200,0.18);
+    --color-primary-variant: #111E88;
+    --color-dark-variant: #677483;
+    --color-background: #F6F6F9;
+
+    --card-border-radius: 2em;
+    --border-radius-1: 0.4em;
+    --border-radius-2: 0.8em;
+    --border-radius-3: 1.2em;
+
+    --card-padding: 1.8em;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2em 3em var(--color-light);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88em;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8em;
+}
+
+h2{
+    font-size: 1.4em;
+}
+
+h3{
+    font-size: 0.97em;
+}
+
+h4{
+    font-size: 0.8em;
+}
+
+h5{
+    font-size: 0.77em;
+}
+
+small{
+    font-size: 0.75em;
+}
+
+.profile-photo{
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+}
+
+.container{
+    display: grid;
+    width: 98%;
+    margin: 0 auto;
+    gap: 1.8em;
+    grid-template-columns: 14em auto 23em;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .top{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4em;
+}
+
+aside .logo{
+    display: flex;
+    gap: 0.8em;
+}
+
+aside .top .logo img{
+    width: 2em;
+    height: 2em;
+}
+
+aside .close{
+    display: none;
+}
+
+aside .sidebar{
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3em;
+}
+
+aside h3{
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2em;
+    gap: 1em;
+    align-items: center;
+    position: relative;
+    height: 3.7em;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6em;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1em - 3px);
+}
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1em;
+    transition: all 300ms ease;
+}
+
+aside .sidebar .message-count{
+    background: var(--color-danger);
+    color: var(--color-white);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+/* Main */
+
+main{
+    margin-top: 1.4em;
+}
+
+main .date{
+    display: inline-block;
+    background: var(--color-light);
+    border-radius: var(--border-radius-1);
+    margin-top: 1em;
+    padding: 0.5em 1.6em;
+}
+
+main .date input[type="date"]{
+    background: transparent;
+    color: var(--color-dark);
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+main .insights {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6em;
+}
+
+main .insights > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 1em;
+    transition: all 300ms ease;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span {
+    background: coral;
+    padding: 0.5em;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 2em;
+}
+
+main .insights > div.expenses span {
+    background: var(--color-danger);
+}
+
+main .insights > div.income span {
+    background: var(--color-success);
+}
+
+main .insights > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 1em 0 0.6em;
+    font-size: 1em;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .insights svg{
+    width: 7em;
+    height: 7em;
+}
+main .insights svg circle{
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+main .insights .sales svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main.insights .expenses svg circle{
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+}
+
+main .insights .income svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+main .insights .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .insights small{
+    margin-top: 1.3rem;
+    display: block;
+}
+
+main .recent-orders{
+    margin-top: 2em;
+}
+
+main .recent-orders h2{
+    margin-bottom: 0.8em;
+}
+
+main .recent-orders table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 2.8em;
+    border-bottom: 1px solid var(--color-light);
+}
+
+main table tbody td:last-child{
+    border-bottom: none;
+}
+main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1em auto;
+    color: var(--color-primary);
+}
+
+.right{
+    margin-top: 1.4em;
+}
+
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap: 2em;
+}
+
+.right .top button{
+    display: none;
+}
+
+.right .theme-toggler{
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6em;
+    width: 4.2em;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span{
+    font-size: 1.2em;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggler span.active{
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+}
+
+.right .top .profile{
+    display: flex;
+    gap: 2em;
+    text-align: right;
+}
+
+.right .recent-updates{
+    margin-top: 1em;
+}
+
+.right .recent-updates h2{
+    margin-bottom: 0.8em;
+}
+
+.right .recent-updates .updates{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .recent-updates .updates:hover{
+    box-shadow: none;
+}
+
+.right .recent-updates .updates .update{
+    display: grid;
+    grid-template-columns: 2.6em auto;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.right .sales-analytics{
+    margin-top: 2em;
+}
+
+.right .sales-analytics h2{
+    margin-bottom: 0.8em;
+}
+
+.right .sales-analytics .item{
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 0.7em;
+    padding: 1.4em var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .sales-analytics .item:hover{
+    box-shadow: none;
+}
+
+.right .sales-analytics .item .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .sales-analytics .item .icon {
+    padding: 0.6em;
+    color: var(--color-white);
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+}
+
+.right .sales-analytics .item-offline .icon{
+    background: var(--color-danger);
+}
+
+.right .sales-analytics .item-customers .icon{
+    background: var(--color-success);
+}
+
+.right .sales-analytics .add-product{
+    background: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .sales-analytics .add-product div{
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+.right .sales-analytics .add-product div h3{
+    font-weight: 600;
+}
